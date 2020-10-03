@@ -55,11 +55,12 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BlurTrigger.cs" />
     <Compile Include="Assets\Scripts\CameraControl.cs" />
     <Compile Include="Assets\Scripts\CameraShader.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\BlurTrigger.cs" />
+    <Compile Include="Assets\Scripts\OnCollide.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Materials\BlurShader.shader" />

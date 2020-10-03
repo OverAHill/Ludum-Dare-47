@@ -5,7 +5,7 @@ using UnityEngine;
 public class BlurTrigger : MonoBehaviour
 {
 
-    public float blur;
+    public static float blur = 0.1f;
 
     // Start is called before the first frame update
     void Start()

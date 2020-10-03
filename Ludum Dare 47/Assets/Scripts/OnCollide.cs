@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OnCollide : MonoBehaviour
 {
+    public string itemName = " ";
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,9 @@ public class OnCollide : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        GameObject.Find("Player").GetComponent<PlayerObjective>().increaseItemAmount();
+        GameObject.Find("Player").GetComponent<PlayerObjective>().AddToList(itemName);
+
         Object.Destroy(this.gameObject);
     }
 }

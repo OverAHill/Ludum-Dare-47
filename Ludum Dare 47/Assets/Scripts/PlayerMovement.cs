@@ -27,6 +27,11 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    public void SetPosition(Vector3 newPos)
+    {
+        transform.position = newPos;
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {

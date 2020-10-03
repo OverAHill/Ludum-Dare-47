@@ -20,13 +20,8 @@ public class CameraControl : MonoBehaviour
     void FixedUpdate()
     {
         //Rotate around the player
-       
-
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            // transform.rotation = butts;
-            //current roatation + some around the player
-            //rotate the offset vector
             transform.RotateAround(player.position, Vector3.up, -20 * Time.deltaTime);
             offset = transform.position - player.position;
         }
@@ -53,5 +48,7 @@ public class CameraControl : MonoBehaviour
     private void Update()
     {
         transform.position = player.position + offset;
+
+      // print(transform.rotation);
     }
 }

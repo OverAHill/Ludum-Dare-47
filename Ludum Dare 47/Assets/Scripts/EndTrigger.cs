@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.SceneManagement;
+
 public class EndTrigger : MonoBehaviour
 {
+
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,12 +21,19 @@ public class EndTrigger : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        int itemAmount = GameObject.Find("Player").GetComponent<PlayerObjective>().GetItemAmount();
+        //int itemAmount = GameObject.Find("Player").GetComponent<PlayerObjective>().GetItemAmount();
 
-        if(itemAmount == 6)
+        if (other.gameObject == player)
         {
-            Application.Quit();
+            print("wuwo");
+
+            if (GameObject.Find("Player").GetComponent<PlayerObjective>().ObjectiveComplete())
+            {
+                SceneManager.LoadScene("EndMenu");
+            }
         }
+
+        
         
     }
 }

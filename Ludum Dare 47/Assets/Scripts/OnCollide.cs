@@ -19,8 +19,10 @@ public class OnCollide : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GameObject.Find("Player").GetComponent<PlayerObjective>().increaseItemAmount();
-        GameObject.Find("Player").GetComponent<PlayerObjective>().AddToList(itemName);
+        // GameObject.Find("Player").GetComponent<PlayerObjective>().increaseItemAmount();
+        //GameObject.Find("Player").GetComponent<PlayerObjective>().AddToList(itemName);
+        GameObject.Find("Player").GetComponent<PlayerObjective>().RemoveItem(itemName);
+
 
         Object.Destroy(this.gameObject);
     }

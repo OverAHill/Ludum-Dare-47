@@ -11,29 +11,35 @@ public class ListUpdate : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        string ShopList = "Shopping List: \n";
+        List<string> list = GameObject.Find("Player").GetComponent<PlayerObjective>().items;
+
+        for (int i = 0; i < 6; i++)
+        {
+            ShopList = ShopList + list[i] + "\n";
+        }
+
+        ListText.text = ShopList; 
     }
 
     // Update is called once per frame
     void Update()
     {
-        int itemAmount = GameObject.Find("Player").GetComponent<PlayerObjective>().GetItemAmount();
+       // int itemAmount = GameObject.Find("Player").GetComponent<PlayerObjective>().GetItemAmount();
         List<string> list = GameObject.Find("Player").GetComponent<PlayerObjective>().items;
 
-        if (itemAmount != 0)
-        {
-           // ListText.text = itemAmount.ToString();
+            // ListText.text = itemAmount.ToString();
 
-            string ShopList = "Shopping List \n";
+            string ShopList = "Shopping List: \n";
 
-            for(int i = 0; i <itemAmount; i++)
+            foreach (string i in list )
             {
-                ShopList = ShopList + list[i] + "\n";
+                ShopList = ShopList + i + "\n";
             }
 
             ListText.text = ShopList;
-
-        }
+           // print(itemAmount);
+        
 
 
     }

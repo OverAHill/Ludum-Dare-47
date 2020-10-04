@@ -8,14 +8,32 @@ public class PlayerObjective : MonoBehaviour
 
     public List<string> items;
     int itemAmount = 0;
-    public int GetItemAmount() { return itemAmount; }
+   //public int GetItemAmount() { return items.; }
 
     // Start is called before the first frame update
     void Start()
     {
         items = new List<string>();
-        //add at start
-        //make function to remove from list and change teh iteraction from "ListUpdate.cs"
+        items.Add("Milk");
+        items.Add("Bread");
+        items.Add("Cereal");
+        items.Add("Cheese");
+        items.Add("Apple");
+        items.Add("Bean");
+    }
+
+    public void RemoveItem(string item)
+    {
+        items.Remove(item);
+        print("remove");
+    }
+
+    public bool ObjectiveComplete()
+    {
+        if (items.Count == 0)
+            return true;
+
+        return false;
     }
 
     public void increaseItemAmount()

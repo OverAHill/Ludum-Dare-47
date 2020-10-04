@@ -2741,8 +2741,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -316, y: 140.43}
-  m_SizeDelta: {x: 230.85461, y: 280.86362}
+  m_AnchoredPosition: {x: -316, y: 107.4}
+  m_SizeDelta: {x: 230.85461, y: 346.93552}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1662604300
 MonoBehaviour:
@@ -3230,8 +3230,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -316, y: 140.43}
-  m_SizeDelta: {x: 230.8573, y: 280.86}
+  m_AnchoredPosition: {x: -312.6, y: 107.4}
+  m_SizeDelta: {x: 251.7221, y: 346.92773}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1944884034
 MonoBehaviour:
@@ -4182,6 +4182,10 @@ PrefabInstance:
       propertyPath: cameraPos
       value: 
       objectReference: {fileID: 963194228}
+    - target: {fileID: 2229673301612317938, guid: dc9f7aa474dd8334fb7bec53b81f1a13, type: 3}
+      propertyPath: m_AngularDrag
+      value: 17.38
+      objectReference: {fileID: 0}
     - target: {fileID: 2229673301612317940, guid: dc9f7aa474dd8334fb7bec53b81f1a13, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

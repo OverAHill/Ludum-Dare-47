@@ -17,7 +17,12 @@ public class EndTrigger : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        print("hello");
-        Application.Quit();
+        int itemAmount = GameObject.Find("Player").GetComponent<PlayerObjective>().GetItemAmount();
+
+        if(itemAmount == 6)
+        {
+            Application.Quit();
+        }
+        
     }
 }

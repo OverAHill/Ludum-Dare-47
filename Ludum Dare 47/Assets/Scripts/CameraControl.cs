@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-    public float forwardForce = 10f;
-    public float sidewaysForce = 10f;
+    public float forwardForce = 50f;
+    public float sidewaysForce = 50f;
 
     public Transform player;
     public Vector3 offset;
@@ -22,13 +22,13 @@ public class CameraControl : MonoBehaviour
         //Rotate around the player
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.RotateAround(player.position, Vector3.up, -20 * Time.deltaTime);
+            transform.RotateAround(player.position, Vector3.up, 70 * Time.deltaTime);
             offset = transform.position - player.position;
         }
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.RotateAround(player.position, Vector3.up, 20 * Time.deltaTime);
+            transform.RotateAround(player.position, Vector3.up, -70 * Time.deltaTime);
             offset = transform.position - player.position;
 
         }

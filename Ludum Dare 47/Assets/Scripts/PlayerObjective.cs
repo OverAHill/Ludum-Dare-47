@@ -6,13 +6,16 @@ using UnityEngine;
 public class PlayerObjective : MonoBehaviour
 {
 
-    List<string> items;
-    float itemAmount = 0f;
+    public List<string> items;
+    int itemAmount = 0;
+    public int GetItemAmount() { return itemAmount; }
 
     // Start is called before the first frame update
     void Start()
     {
         items = new List<string>();
+        //add at start
+        //make function to remove from list and change teh iteraction from "ListUpdate.cs"
     }
 
     public void increaseItemAmount()
